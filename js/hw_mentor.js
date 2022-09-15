@@ -10,7 +10,7 @@
 
 // Записати в функцію і в одну лінію
 const isWordPolinom = word =>
-word.toLowerCase().split('').reverse().join('')===word.toLowerCase()
+[...word.toLowerCase()].reverse().join('')===word.toLowerCase()
  ? `Word ${word} is polinom`
  : `Word ${word} is NOT polinom`;
 
