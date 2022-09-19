@@ -44,9 +44,9 @@
 // console.log(arr); //[23, 4, 78, 5, 63, 45, 210]
 
 
-let arr = [23,56,4,78,5,63,45,210,56];
-// arr = deleteElement(arr, 56)
-console.log(arr); //[23, 4, 78, 5, 63, 45, 210]
+// let arr = [23,56,4,78,5,63,45,210,56];
+// // arr = deleteElement(arr, 56)
+// console.log(arr); //[23, 4, 78, 5, 63, 45, 210]
 
 // function deleteElement(arr, removeNumber, addNumber) {
 //     arr.forEach((number, index) => {
@@ -79,3 +79,36 @@ console.log(arr); //[23, 4, 78, 5, 63, 45, 210]
 // const data = [1, 2, 3, 4, 5, 6, 7];
 // console.log(chunkArray(data, 2)) // [[1, 2], [3, 4], [5, 6], [7]]
 // console.log(chunkArray(data, 3)) // [[1, 2, 3], [4, 5, 6], [7]]
+
+// 19/09/2022
+// function greet() {
+//     console.log(1);
+// }
+
+// greet();
+
+
+const sara = {
+    nickName: "Sara",
+    age: 25,
+    showInfo() {
+        console.log(this.nickName, this.age)
+    }
+};
+
+const alex = {
+    nickName: "Alex",
+    age: 40,
+   
+}
+
+// sara.showInfo.call(alex, 2);
+// sara.showInfo.apply(alex, [1, 2]);
+
+
+
+
+// function greet(showInfo) {
+//     console.log(`${showInfo}`)
+// }
+// greet();
