@@ -79,22 +79,82 @@
 const data = [1, 2, 3, 4, 5, 6, 7];
 function chunkArray(data, chunk) {
     const newArr = [];
-    data.forEach((number, index, arr) => {
-        newArr.push(arr.splice(0, chunk));        
-    });
+    // const arr= [];
+    [...data].forEach((number, index, arr) => {
+        [newArr.push(arr.splice(0, chunk)), ...arr]
+        // newArr.concat([arr]);   
+        // console.log(arr);   
+        return  data.length%chunk ===0
+        ? newArr.concat([arr])
+        : newArr.concat([data.slice(-(data.length%chunk))]);  
+        //  data.length%chunk ===0
+        // ? newArr.push(arr.splice(0, chunk))
+        // : newArr.concat([data.slice(-(data.length%chunk))])    
+           
+    //     if (data.length%chunk ===0) {
 
-    return newArr.concat([data]);
+    //   return  newArr.push(arr.splice(0, chunk));
+    //     }  
+    
+    // return  newArr.concat([data.slice(-(data.length%chunk))]);
+    // // .concat(arr); 
+    // }
+    
+    
+    })
+    // console.log(data.slice(-(data.length%chunk)));
+    // return data.length%chunk ===0
+    //     ? newArr
+    //     : newArr.concat([data.slice(-(data.length%chunk))]);
+    return newArr;
 };
-
 
 // chunkArray(data, 2);
 
 console.log(chunkArray(data, 2)); // [[1, 2], [3, 4], [5, 6], [7]]
 // console.log(data);
+console.log(chunkArray(data, 3)); // [[1, 2, 3], [4, 5, 6], [7]]
+
+
+// // !!!!!task!!!!!
+// // // Напишіть метод, який розбиває масив на частини визначеного розміру
+// const data = [1, 2, 3, 4, 5, 6, 7];
+// function chunkArray(data, chunk) {
+//     const newArr = [];
+//     const newData = [...data];
+//     newData.forEach((number, index, arr) => {
+//         newArr.push(arr.splice(0, chunk));                
+//     });
+
+//     return [...newArr, ...[newData]];
+// };
+
+
+// console.log(chunkArray(data, 2)); // [[1, 2], [3, 4], [5, 6], [7]]
+
 // console.log(chunkArray(data, 3)); // [[1, 2, 3], [4, 5, 6], [7]]
 
 
 
+
+// // // task
+// // // Напишіть метод, який розбиває масив на частини визначеного розміру
+// const data = [1, 2, 3, 4, 5, 6, 7];
+// function chunkArray(data, chunk) {
+//     const newArr = [];
+//     data.forEach((number, index, arr) => {
+//         newArr.push(arr.splice(0, chunk));        
+//     });
+
+//     return newArr.concat([data]);
+// };
+
+
+// // chunkArray(data, 2);
+
+// console.log(chunkArray(data, 2)); // [[1, 2], [3, 4], [5, 6], [7]]
+// // // console.log(data);
+// // // console.log(chunkArray(data, 3)); // [[1, 2, 3], [4, 5, 6], [7]]
 
 
 // 19/09/2022
