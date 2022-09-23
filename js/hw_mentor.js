@@ -75,21 +75,21 @@
 
 
 // task
-// Напишіть метод, який розбиває масив на частини визначеного розміру
-const data = [1, 2, 3, 4, 5, 6, 7];
-function chunkArray(data, chunk) {
-    const newArr = [];
-    // const arr= [];
-    [...data].forEach((number, index, arr) => {
-        [newArr.push(arr.splice(0, chunk)), ...arr]
-        // newArr.concat([arr]);   
-        // console.log(arr);   
-        return  data.length%chunk ===0
-        ? newArr.concat([arr])
-        : newArr.concat([data.slice(-(data.length%chunk))]);  
-        //  data.length%chunk ===0
-        // ? newArr.push(arr.splice(0, chunk))
-        // : newArr.concat([data.slice(-(data.length%chunk))])    
+// // Напишіть метод, який розбиває масив на частини визначеного розміру
+// const data = [1, 2, 3, 4, 5, 6, 7];
+// function chunkArray(data, chunk) {
+//     const newArr = [];
+//     // const arr= [];
+//     [...data].forEach((number, index, arr) => {
+//         [newArr.push(arr.splice(0, chunk)), ...arr]
+//         // newArr.concat([arr]);   
+//         // console.log(arr);   
+//         return  data.length%chunk ===0
+//         ? newArr.concat([arr])
+//         : newArr.concat([data.slice(-(data.length%chunk))]);  
+//         //  data.length%chunk ===0
+//         // ? newArr.push(arr.splice(0, chunk))
+//         // : newArr.concat([data.slice(-(data.length%chunk))])    
            
     //     if (data.length%chunk ===0) {
 
@@ -101,24 +101,24 @@ function chunkArray(data, chunk) {
     // }
     
     
-    })
-    // console.log(data.slice(-(data.length%chunk)));
-    // return data.length%chunk ===0
-    //     ? newArr
-    //     : newArr.concat([data.slice(-(data.length%chunk))]);
-    return newArr;
-};
+//     })
+//     // console.log(data.slice(-(data.length%chunk)));
+//     // return data.length%chunk ===0
+//     //     ? newArr
+//     //     : newArr.concat([data.slice(-(data.length%chunk))]);
+//     return newArr;
+// };
 
-// chunkArray(data, 2);
+// // chunkArray(data, 2);
 
-console.log(chunkArray(data, 2)); // [[1, 2], [3, 4], [5, 6], [7]]
-// console.log(data);
-console.log(chunkArray(data, 3)); // [[1, 2, 3], [4, 5, 6], [7]]
+// console.log(chunkArray(data, 2)); // [[1, 2], [3, 4], [5, 6], [7]]
+// // console.log(data);
+// console.log(chunkArray(data, 3)); // [[1, 2, 3], [4, 5, 6], [7]]
 
 
-// // !!!!!task!!!!!
-// // // Напишіть метод, який розбиває масив на частини визначеного розміру
-// const data = [1, 2, 3, 4, 5, 6, 7];
+// // // !!!!!task!!!!!
+// // // // Напишіть метод, який розбиває масив на частини визначеного розміру
+// const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1, 6, 17, 18];
 // function chunkArray(data, chunk) {
 //     const newArr = [];
 //     const newData = [...data];
@@ -133,6 +133,24 @@ console.log(chunkArray(data, 3)); // [[1, 2, 3], [4, 5, 6], [7]]
 // console.log(chunkArray(data, 2)); // [[1, 2], [3, 4], [5, 6], [7]]
 
 // console.log(chunkArray(data, 3)); // [[1, 2, 3], [4, 5, 6], [7]]
+
+// // task!
+// // // Напишіть метод, який розбиває масив на частини визначеного розміру
+const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1, 6, 17, 18, 19];
+function chunkArray(data, chunk) {
+    const newArr = [];
+    const newData = [...data];
+    newData.forEach((number, index, arr) => {
+        newArr.push(arr.splice(0, chunk));                
+    });
+
+    return [...newArr];
+};
+
+
+console.log(chunkArray(data, 2)); // [[1, 2], [3, 4], [5, 6], [7]]
+
+console.log(chunkArray(data, 3)); // [[1, 2, 3], [4, 5, 6], [7]]
 
 
 

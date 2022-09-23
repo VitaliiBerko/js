@@ -26,34 +26,79 @@
 
 // task 11
 
-class StringBuilder {
-    constructor(value) {
-      this.value = value;    
-    }
-  getValue() {
-  return  this.value;
-  }
-    padEnd(str) {
-     this.value=this.value + str;
-    }
-    padStart(str) {
-        this.value=  str+this.value;
-    }
+// class StringBuilder {
+//     constructor(value) {
+//       this.value = value;    
+//     }
+//   getValue() {
+//   return  this.value;
+//   }
+//     padEnd(str) {
+//      this.value=this.value + str;
+//     }
+//     padStart(str) {
+//         this.value=  str+this.value;
+//     }
   
-    padBoth(str) {
-        this.value= str+this.value+str;
-    }
-  }
+//     padBoth(str) {
+//         this.value= str+this.value+str;
+//     }
+//   }
   
   
-  // Change code above this line
-  const builder = new StringBuilder(".");
-  console.log(builder.getValue()); // "."
+  // // Change code above this line
+  // const builder = new StringBuilder(".");
+  // console.log(builder.getValue()); // "."
 
-  builder.padStart("^");
-  console.log(builder.getValue()); // "^."
-  builder.padEnd("^");
-  console.log(builder.getValue()); // "^.^"
-  builder.padBoth("=");
-  console.log(builder.getValue()); // "=^.^="
+  // builder.padStart("^");
+  // console.log(builder.getValue()); // "^."
+  // builder.padEnd("^");
+  // console.log(builder.getValue()); // "^.^"
+  // builder.padBoth("=");
+  // console.log(builder.getValue()); // "=^.^="
+// _____________________________________________________________________________________________________________________________________ 
+  // tutorial
+  // const animal = {
+  //   legs: 4,
+  // };
+  // const dog = Object.create(animal);
+  // dog.name = "Манго";
   
+  // console.log(dog); // { name: 'Манго', __proto__: animal }
+  // console.log(animal.isPrototypeOf(dog)); // true
+
+
+  class User {
+    #salary;
+    constructor ({userName, email, salary}={}) {
+      this.userName = userName;
+      this.email = email;
+      this.#salary = salary;
+    }
+    static PI = 3.14;
+
+    getSalary(){
+      return this.#salary;
+    }
+    chengeSalary(newSalary) {
+      return this.#salary = newSalary;
+    }
+
+  };
+
+  const bob = new User({userName: 'Bob', email: 'bob@mail.com', salary:1000,});
+  console.log(bob);
+
+ class Child extends User {
+  constructor({age, ...restProps} ={}) {
+    super(restProps);
+    this.age = age;
+  }
+
+ };
+
+ const alex = new Child({userName: 'Alex', email: 'alex@mail.com', salary: 3000, age: 45})
+ console.log(alex);
+ alex.chengeSalary(5000);
+ console.log(alex);
+ console.log(User.PI);
