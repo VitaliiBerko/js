@@ -329,13 +329,13 @@
 // const path = '/upload/';
 // let uploadedFiles = [];
   
-// imagesName.forEach(function (img) {
-//   uploadedFiles.push(`${this}${path}${img}`)
-  
-// }, baseUrl)
-// console.log(uploadedFiles)
-// uploadedFiles = imagesName.map(img => `${baseUrl}${path}${img}`)
-//  console.log(uploadedFiles)
+// // imagesName.forEach(function (img) {
+// //   uploadedFiles.push(`${this}${path}${img}`)  
+// // }, baseUrl)
+// // console.log(uploadedFiles)
+
+// // uploadedFiles = imagesName.map(img => `${baseUrl}${path}${img}`)
+// //  console.log(uploadedFiles)
 
 // uploadedFiles = imagesName.reduce((acc, img) => {
 //   return [...acc, `${baseUrl}${path}${img}`]
@@ -421,7 +421,7 @@
 //     total += product
 // , 0)
 
-// console.log(sum);
+// console.log(`Сума товару  ${sum}`);
 
 
 // Потрібно отримати URL адресу із адресного рядка бразуера.
@@ -450,31 +450,36 @@
 // Напишіть метод, який очищає масив від усіх непотрібних елементів, таких як false, undefined, порожні рядки, нуль, null
 
 // const data = [0, 1, false, 2, undefined, '', 3, null];
+// function compact(data) {
+//   return  data.filter(Boolean             
+//         )
+// }
+
 // console.log(compact(data)) // [1, 2, 3]
 
 
 // Ви маєте масив об'єктів user, і в кожному з них є user.name. Напишіть код, який перетворює їх на масив імен за порядком зростання, за віком.
 // Наприклад:
 
-let jhon = { name: "Jhon", age: 26 };
-let bruce = { name: "Bruce", age: 24 };
-let maria = { name: "Maria", age: 28 };
+// let jhon = { name: "Jhon", age: 26 };
+// let bruce = { name: "Bruce", age: 24 };
+// let maria = { name: "Maria", age: 28 };
 
-let users = [ jhon, bruce, maria ];
+// let users = [ jhon, bruce, maria ];
 
-// let names = /* ... ваш код */
+// // let names = /* ... ваш код */
 
-// alert(names); // Bruce, Jhon, Maria
+// // alert(names); // Bruce, Jhon, Maria
 
-let names = users.sort((prev, next) => {
+// let names = users.sort((prev, next) => {
    
-    // console.log(prev);
-    // console.log(next);
+//     // console.log(prev);
+//     // console.log(next);
 
-    return next.age - prev.age;
-})
-    .map(item => item.name);
+//     return next.age - prev.age;
+// })
+//     .map(item => item.name);
 
-console.log(users);
-console.log(names);
+// console.log(users);
+// console.log(names);
 
