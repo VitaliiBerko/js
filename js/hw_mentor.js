@@ -329,13 +329,13 @@
 // const path = '/upload/';
 // let uploadedFiles = [];
   
-// imagesName.forEach(function (img) {
-//   uploadedFiles.push(`${this}${path}${img}`)
-  
-// }, baseUrl)
-// console.log(uploadedFiles)
-// uploadedFiles = imagesName.map(img => `${baseUrl}${path}${img}`)
-//  console.log(uploadedFiles)
+// // imagesName.forEach(function (img) {
+// //   uploadedFiles.push(`${this}${path}${img}`)  
+// // }, baseUrl)
+// // console.log(uploadedFiles)
+
+// // uploadedFiles = imagesName.map(img => `${baseUrl}${path}${img}`)
+// //  console.log(uploadedFiles)
 
 // uploadedFiles = imagesName.reduce((acc, img) => {
 //   return [...acc, `${baseUrl}${path}${img}`]
@@ -421,7 +421,7 @@
 //     total += product
 // , 0)
 
-// console.log(sum);
+// console.log(`Сума товару  ${sum}`);
 
 
 // Потрібно отримати URL адресу із адресного рядка бразуера.
@@ -450,6 +450,11 @@
 // Напишіть метод, який очищає масив від усіх непотрібних елементів, таких як false, undefined, порожні рядки, нуль, null
 
 // const data = [0, 1, false, 2, undefined, '', 3, null];
+// function compact(data) {
+//   return  data.filter(Boolean             
+//         )
+// }
+
 // console.log(compact(data)) // [1, 2, 3]
 
 
