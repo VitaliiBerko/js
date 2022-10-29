@@ -456,25 +456,51 @@
 // Ви маєте масив об'єктів user, і в кожному з них є user.name. Напишіть код, який перетворює їх на масив імен за порядком зростання, за віком.
 // Наприклад:
 
-let jhon = { name: "Jhon", age: 26 };
-let bruce = { name: "Bruce", age: 24 };
-let maria = { name: "Maria", age: 28 };
+// let jhon = { name: "Jhon", age: 26 };
+// let bruce = { name: "Bruce", age: 24 };
+// let maria = { name: "Maria", age: 28 };
 
-let users = [ jhon, bruce, maria ];
+// let users = [ jhon, bruce, maria ];
 
-// let names = /* ... ваш код */
+// // let names = /* ... ваш код */
 
-// alert(names); // Bruce, Jhon, Maria
+// // alert(names); // Bruce, Jhon, Maria
 
-let names = users.sort((prev, next) => {
+// let names = users.sort((prev, next) => {
    
-    // console.log(prev);
-    // console.log(next);
+//     // console.log(prev);
+//     // console.log(next);
 
-    return next.age - prev.age;
-})
-    .map(item => item.name);
+//     return next.age - prev.age;
+// })
+//     .map(item => item.name);
 
-console.log(users);
-console.log(names);
+// console.log(users);
+// console.log(names);
 
+
+
+// 29.10.2022 MENTOR___________________________________________________________________________________
+
+
+// Напишіть код JavaScript, щоб кубик рухався, коли настискати стрілки вверх, вниз, вілво, вправо
+
+// <!DOCTYPE html>
+// <html>
+// <head>
+// <meta charset=utf-8 />
+//   <title>Change the content of a cell</title>
+// <style>
+//   .cube {
+//   position: absolute;
+//   width: 50px;
+//   height: 50px;
+//   background: green;
+// }
+// </style>
+// </head>
+// <body>
+//
+// <div class="cube" style="top: 0; left: 0;"></div>
+// </body>
+// </html>
