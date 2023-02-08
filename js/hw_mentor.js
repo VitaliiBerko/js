@@ -100,6 +100,26 @@
     // // .concat(arr); 
     // }
     
+function chunkWatchedFilms() {
+  const chunk = 2;
+  try {
+    let data = localStorage.getItem('WatchedMovies');
+    if (data) {
+      data = JSON.parse(data);
+      let i = 0;
+      const updateData = [];
+      while (i < data.length) {
+        updateData.push(data.slice(i, chunk + i));
+        i += chunk;
+
+      }
+      return updateData;
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
     
 //     })
 //     // console.log(data.slice(-(data.length%chunk)));
